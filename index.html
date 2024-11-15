@@ -1,11 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo Arcadia</title>
+    <meta name="description" content="Bienvenue au Zoo Arcadia, au cœur de la forêt de Brocéliande en Bretagne. Découvrez nos services et habitats uniques.">
+    <title>Zoo Arcadia - Services et Habitats</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container header-content">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="image/logo.jpg" alt="Logo Zoo Arcadia">
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#habitats">Habitats</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="btn-login">Connexion</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#login-veterinaire">Vétérinaire</a></li>
+                            <li><a href="#login-employe">Employé</a></li>
+                            <li><a href="#login-admin">Administrateur</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <main>
+        <!-- Section d'accueil -->
+        <section id="home" class="home">
+            <div class="container">
+                <h1>Bienvenue au Zoo Arcadia</h1>
+                <p>Bienvenue au Zoo Arcadia, un havre de paix niché au cœur de la légendaire forêt de Brocéliande en Bretagne. Plus qu'un simple zoo, Arcadia est une véritable aventure immersive où la nature et la vie sauvage s'unissent pour émerveiller petits et grands.
+
+                    Découvrez une collection exceptionnelle d'espèces animales venant des quatre coins du monde, évoluant dans des habitats fidèlement recréés : la Savane, la Jungle tropicale et les mystérieux Marais. Chaque zone vous transporte dans un univers unique où vous pouvez admirer lions majestueux, singes espiègles, crocodiles impressionnants et bien d'autres encore.
+                    
+                    Plus qu'un lieu de découverte, le Zoo Arcadia est engagé dans la protection des espèces en danger et la sensibilisation à la biodiversité. Participez à des visites guidées gratuites, détendez-vous dans nos espaces de restauration, et profitez d'une balade en petit train pour explorer le parc de manière ludique.
+                    
+                    Que vous soyez passionné par les animaux ou simplement en quête d'une journée inoubliable en famille, le Zoo Arcadia vous promet une expérience unique, à la fois éducative, divertissante et respectueuse de l'environnement.</p>
+            </div>
+        </section>
+        <!-- Section Services -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <div class="service-list">
+                    <div class="service">
+                        <img src="image/restauration.jpg" alt="Service de restauration">
+                        <h3>Restauration</h3>
+                        <p>Profitez de notre restaurant et de nos snacks avec une vue imprenable sur la nature environnante.</p>
+                    </div>
+                    <div class="service">
+                        <img src="image/visite guidée.jpg" alt="Visite guidée">
+                        <h3>Visite guidée (gratuite)</h3>
+                        <p>Explorez les habitats du zoo avec l'un de nos guides experts. Inclus dans votre billet d'entrée !</p>
+                    </div>
+                    <div class="service">
+                        <img src="image/train.jpg" alt="Petit train">
+                        <h3>Visite en petit train</h3>
+                        <p>Découvrez le zoo en confort à bord de notre petit train, idéal pour les familles et les enfants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Habitats -->
+        <section id="habitats" class="habitats">
+            <div class="container">
+                <h2>Nos Habitats</h2>
+                <div class="habitat-list">
+                    <div class="habitat">
+                        <img src="image/savane.jpg" alt="Habitat de la Savane">
+                        <h3>Savane</h3>
+                        <p>La maison des lions, zèbres, et girafes. Un décor époustouflant de plaines dorées et d'acacias.</p>
+                    </div>
+                    <div class="habitat">
+                        <img src="image/jungle.jpg" alt="Habitat de la Jungle">
+                        <h3>Jungle</h3>
+                        <p>Plongez dans une forêt tropicale luxuriante où résident nos singes, tigres et oiseaux exotiques.</p>
+                    </div>
+                    <div class="habitat">
+                        <img src="image/marais.jpg" alt="Habitat des Marais">
+                        <h3>Marais</h3>
+                        <p>Découvrez une zone humide où vivent les crocodiles, tortues et une variété d'oiseaux aquatiques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="animals" class="animals">
+            <div class="container">
+                <h2>Nos Animaux</h2>
+                <p>
+                    Découvrez une sélection des animaux emblématiques de notre zoo, issus des quatre coins du monde. Chaque espèce est soigneusement protégée dans un habitat qui reflète son environnement naturel.
+                </p>
+                <div class="animal-gallery">
+                    <div class="animal">
+                        <img src="image/0ef43411-affd-41dd-8599-915dd5d797f8.webp" alt="Lion">
+                        <h3>Le Lion</h3>
+                        <p>Le roi de la savane. Puissant et majestueux.</p>
+                    </div>
+                    <div class="animal">
+                        <img src="image/panda.webp" alt="Panda">
+                        <h3>Le Panda</h3>
+                        <p>Un trésor de la nature, symbole de paix.</p>
+                    </div>
+                    <div class="animal">
+                        <img src="image/toucan.webp" alt="Toucan">
+                        <h3>Le Toucan</h3>
+                        <p>Un oiseau coloré des jungles tropicales.</p>
+                    </div>
+                    <div class="animal">
+                        <img src="image/crocodile.webp" alt="Crocodile">
+                        <h3>Le Crocodile</h3>
+                        <p>Un prédateur impressionnant des marais.</p>
+                    </div>
+                    <div class="animal">
+                        <img src="image/girafe.webp" alt="Crocodile">
+                        <h3>La Girafe</h3>
+                        <p>Une grandeur machestueuse.</p>
+                    </div>
+                    <div class="animal">
+                        <img src="image/hippopotame.webp" alt="Crocodile">
+                        <h3>L'hippopotame</h3>
+                        <p>Un animal de la savane à ne pas sous estimer.</p>
+                    </div>
+                </div>
+            </div>
+            <p>Et bien d'autres encore...</p>
+        </section>  
+
+        <!-- Section Avis-->
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <h2>Avis de nos visiteurs</h2>
+                <p>
+                    Découvrez ce que nos visiteurs disent de leur expérience au Zoo Arcadia.
+                </p>
+                <div class="review-list">
+                    <div class="review">
+                        <p class="quote">"Une expérience inoubliable ! Mes enfants ont adoré la visite en petit train et les habitats sont magnifiques."</p>
+                        <p class="author">- Claire M.</p>
+                    </div>
+                    <div class="review">
+                        <p class="quote">"Un endroit magique. J'ai particulièrement aimé la savane, c'est comme un vrai safari !"</p>
+                        <p class="author">- Julien R.</p>
+                    </div>
+                    <div class="review">
+                        <p class="quote">"L'engagement pour la conservation est remarquable. Une visite éducative et très agréable."</p>
+                        <p class="author">- Sophie L.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="review-list" class="review-list"></div>
+
+        <!-- Formulaire pour ajouter un avis -->
+        <div class="review-form">
+            <h3>Laissez votre avis</h3>
+            <form id="submit-review" action="#" method="post">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                <label for="review">Votre avis :</label>
+                <textarea id="review" name="review" placeholder="Partagez votre expérience" rows="4" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="contact">
+            <div class="contact-info">
+                <p><strong>Adresse :</strong> Zoo Arcadia, 123 Route de Brocéliande, 56430 Bretagne, France</p>
+                <p><strong>Email :</strong> <a href="mailto:contact@zooarcadia.fr">contact@zooarcadia.fr</a></p>
+                <p><strong>Téléphone :</strong> <a href="tel:+3399000000">+33 9 90 00 00 00</a></p>
+            </div>
+            
+        </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Zoo Arcadia - Tous droits réservés | Situé à proximité de la forêt de Brocéliande, Bretagne.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,392 @@
+/* Couleurs globales */
+:root {
+    --primary-green: #2d5c3b; /* Vert forêt */
+    --secondary-green: #6c9e73; /* Vert doux */
+    --light-beige: #f5f5eb; /* Beige clair */
+    --brown: #8c6239; /* Brun naturel */
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+/* Section globale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-beige);
+    color: var(--text-dark);
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+   
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background: #2d5c3b;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-login {
+    background: #f4a261;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/* Menu déroulant */
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f4a261;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu li {
+    text-align: center;
+    padding: 0.5rem;
+}
+.dropdown-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu li:hover {
+    background-color: #f4a261;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Connexion boutons */
+.btn-login {
+    background: #f4a261;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section d'accueil */
+.home {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--light-beige);
+    color: var(--primary-green);
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+    font-weight: bold;
+}
+
+.home p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+/*contact infos */
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.contact-info p {
+    margin: 0.5rem 0;
+}
+.contact-info a {
+    color: #2d5c3b;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Services */
+.service-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    text-align: center;
+    max-width: 300px;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.service p {
+    font-size: 0.9rem;
+}
+
+
+/* Sections */
+section {
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+/* Habitats */
+.habitat-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.habitat {
+    text-align: center;
+    max-width: 300px;
+}
+
+.habitat img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background: #2d5c3b;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+/* Section Animaux */
+.animals {
+    padding: 4rem 2rem;
+    background-color: var(--light-beige);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.animals h2 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.animals p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.animal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.animal {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animal img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.animal h3 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.animal p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Section Avis */
+.reviews {
+    padding: 4rem 2rem;
+    background-color: var(--secondary-green);
+    color: black;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;   
+    margin-bottom: 1rem;
+}
+
+.reviews p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review {
+    background: var(--light-beige);
+    color: var(--primary-green);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.review .quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.review .author {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Formulaire pour soumettre un avis */
+.review-form {
+    margin-top: 3rem;
+    background-color: var(--light-beige);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-form h3 {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.review-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.review-form button {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.review-form button:hover {
+    background-color: var(--secondary-green);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
