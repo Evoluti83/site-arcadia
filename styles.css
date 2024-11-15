@@ -13,6 +13,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--light-beige);
     color: var(--text-dark);
+    text-align: center;
 }
 
 /* Styles généraux */
@@ -390,3 +391,75 @@ form button {
     text-align: center;
     padding: 1rem 0;
 }
+
+/* Page Connexion Administrateur */
+.admin-login {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.admin-login h2 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.admin-login form {
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    background-color: var(--light-beige);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login form label {
+    font-weight: bold;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.admin-login form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-login form button {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-login form button:hover {
+    background-color: var(--secondary-green);
+    transform: scale(1.05);
+}
+
+/* Bouton Déconnexion */
+#logout-btn {
+    float: right;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+    background-color: var(--secondary-green);
+}
+

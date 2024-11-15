@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configuration des services pour le Zoo Arcadia">
+    <title>Admin - Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Administration - Services</h1>
+            <button id="logout-btn">Déconnexion</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-panel">
+            <div class="container">
+                <h2>Gérer les Services</h2>
+
+                <!-- Formulaire pour ajouter ou modifier un service -->
+                <form id="service-form">
+                    <label for="service-title">Titre du service :</label>
+                    <input type="text" id="service-title" placeholder="Exemple : Restauration" required>
+
+                    <label for="service-description">Description :</label>
+                    <textarea id="service-description" placeholder="Exemple : Profitez de notre restaurant et snack..." rows="4" required></textarea>
+
+                    <label for="service-image">URL de l'image :</label>
+                    <input type="text" id="service-image" placeholder="Exemple : images/restauration.jpg" required>
+
+                    <button type="submit">Ajouter/Mettre à jour</button>
+                </form>
+
+                <!-- Liste des services existants -->
+                <div id="service-list">
+                    <h3>Services configurés :</h3>
+                    <ul id="services-container"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+    
+    <script>
+        // Vérifier si l'administrateur est authentifié
+        const isAuthenticated = localStorage.getItem("isAdminAuthenticated");
+    
+        if (isAuthenticated !== "true") {
+            alert("Accès interdit. Veuillez vous connecter en tant qu'administrateur.");
+            window.location.href = "admin-login.html"; // Rediriger vers la page de connexion
+        }
+    </script>
+    
+    <script>
+        // Bouton de déconnexion
+        document.getElementById("logout-btn").addEventListener("click", function () {
+            localStorage.removeItem("isAdminAuthenticated");
+            window.location.href = "admin-login.html"; // Rediriger vers la page de connexion
+        });
+    </script>
+    
+</body>
+</html>
+

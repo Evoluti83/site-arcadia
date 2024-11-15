@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les services proposés par le Zoo Arcadia : restauration, visites guidées gratuites et balade en petit train.">
+    <title>Nos Services - Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="images/logo-zoo-arcadia.png" alt="Logo Zoo Arcadia">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="habitats.html">Habitats</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main>
+        <section class="services-intro">
+            <div class="container">
+                <h1>Nos Services</h1>
+                <p>
+                    Le Zoo Arcadia vous propose une variété de services pour rendre votre visite agréable et inoubliable. Explorez nos options ci-dessous !
+                </p>
+            </div>
+        </section>
+
+        <!-- Liste des services -->
+        <section class="services-list">
+            <div class="container" id="dynamic-services">
+                <div class="service-item">
+                    <img src="image/restauration.jpg" alt="Restauration">
+                    <h2>Restauration</h2>
+                    <p>Profitez de notre restaurant et de nos snacks avec une vue imprenable sur les habitats naturels. Une expérience culinaire pour petits et grands.</p>
+                </div>
+                <div class="service-item">
+                    <img src="image/visite guidée.jpg" alt="Visites guidées">
+                    <h2>Visites guidées gratuites</h2>
+                    <p>Apprenez-en davantage sur nos animaux grâce à nos guides passionnés. Inclus dans votre billet d'entrée !</p>
+                </div>
+                <div class="service-item">
+                    <img src="image/train.jpg" alt="Petit train">
+                    <h2>Visite en petit train</h2>
+                    <p>Parcourez le zoo confortablement à bord de notre petit train, idéal pour les familles avec enfants.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="services-list">
+        <div class="container" id="dynamic-services"></div>
+    </section>
+    
+    <script>
+        // Charger les services depuis localStorage
+        const dynamicServicesContainer = document.getElementById('dynamic-services');
+        const storedServices = JSON.parse(localStorage.getItem('services')) || [];
+    
+        if (storedServices.length > 0) {
+            storedServices.forEach(service => {
+                const serviceItem = document.createElement('div');
+                serviceItem.className = 'service-item';
+                serviceItem.innerHTML = `
+                    <img src="${service.image}" alt="${service.title}">
+                    <h2>${service.title}</h2>
+                    <p>${service.description}</p>
+                `;
+                dynamicServicesContainer.appendChild(serviceItem);
+            });
+        } else {
+            dynamicServicesContainer.innerHTML = '<p>Aucun service configuré pour le moment.</p>';
+        }
+    </script>
+   
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Zoo Arcadia - Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

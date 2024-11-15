@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Administrateur - Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Connexion Administrateur</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-login">
+            <div class="container">
+                <h2>Se connecter</h2>
+                <form id="admin-login-form">
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" placeholder="Entrez votre nom d'utilisateur" required>
+                    
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+                    
+                    <button type="submit">Connexion</button>
+                </form>
+
+                <p id="login-message" style="color: red; display: none;">Nom d'utilisateur ou mot de passe incorrect.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin-login.js"></script>
+</body>
+</html>

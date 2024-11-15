@@ -1,0 +1,77 @@
+/* Centrer le texte dans la section introduction */
+.services-intro {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--light-beige);
+    color: var(--primary-green);
+}
+
+.services-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+}
+
+.services-intro p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto; /* Centrage horizontal */
+    line-height: 1.8;
+}
+
+
+/* Services Section */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background-color: #fff;
+}
+
+.service-item {
+    text-align: center;
+    background-color: var(--light-beige);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-item {
+        padding: 1rem;
+    }
+
+    .service-item img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
